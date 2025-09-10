@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Login from './components/Login';
 import './App.css';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState<string>('');
+
+  const handleLogin = (username: string, password: string) => {
+    // Simple hardcoded authentication for demo
+    if ((username.toLowerCase() === 'admin' && password === 'password') ||
+        (username.toLowerCase() === 'demo' && password === 'password')) {
+      setUser(username);
+      setIsLoggedIn(true);
+    } else {
+      alert('AUTHENTICATION FAILED!\nInvalid credentials.');
+    }
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setUser('');
+  };
+
+  if (!isLoggedIn) {
+    return <Login onLogin={handleLogin} />;
+  }
+
   return (
     <div className="App">
       <div className="scanlines"></div>
@@ -18,6 +42,12 @@ function App() {
               <span className="blink">★</span> 
               DIGITAL CURRENCY TRACKER 
               <span className="blink">★</span>
+            </div>
+            <div className="user-info">
+              <span className="user-welcome">WELCOME COMMANDER {user.toUpperCase()}</span>
+              <button className="logout-btn" onClick={handleLogout}>
+                [ LOGOUT ]
+              </button>
             </div>
           </div>
 
@@ -37,24 +67,29 @@ function App() {
                   <span className="status-label">CRYPTO-NET:</span>
                   <span className="status-value ready">READY</span>
                 </div>
+                <div className="status-line">
+                  <span className="status-label">USER:</span>
+                  <span className="status-value online">{user.toUpperCase()}</span>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="retro-box">
             <div className="welcome-message">
-              <div className="message-header">[ WELCOME COMMANDER ]</div>
+              <div className="message-header">[ MISSION BRIEFING ]</div>
               <p className="pixel-text-small">
-                Initialize your cryptocurrency surveillance system.<br/>
+                Cryptocurrency surveillance system initialized.<br/>
                 Real-time market data acquisition protocols loaded.<br/>
-                TypeScript neural networks: ACTIVE
+                TypeScript neural networks: ACTIVE<br/>
+                Commander {user.toUpperCase()} authenticated and ready for deployment.
               </p>
             </div>
           </div>
 
           <div className="start-button">
             <button className="retro-btn">
-              <span className="btn-text">▶ START MISSION</span>
+              <span className="btn-text">▶ BEGIN DATA ACQUISITION</span>
             </button>
           </div>
         </div>

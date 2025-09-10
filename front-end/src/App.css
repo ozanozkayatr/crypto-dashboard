@@ -112,6 +112,42 @@ body {
   text-shadow: 0 0 3px #87ceeb;
 }
 
+/* User Info */
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.user-welcome {
+  font-size: 0.6rem;
+  color: #90ee90;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 0 3px #90ee90;
+}
+
+.logout-btn {
+  background: rgba(221, 160, 221, 0.2);
+  border: 1px solid #dda0dd;
+  color: #dda0dd;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 2px #dda0dd;
+}
+
+.logout-btn:hover {
+  background: rgba(221, 160, 221, 0.3);
+  box-shadow: 0 0 10px rgba(221, 160, 221, 0.5);
+  transform: scale(1.05);
+}
+
 /* Retro boxes */
 .retro-box {
   background: rgba(168, 230, 207, 0.08);
