@@ -9,20 +9,20 @@
 body {
   margin: 0;
   font-family: 'Press Start 2P', monospace;
-  background: #000;
+  background: #16213e;
   overflow-x: hidden;
 }
 
 .App {
   min-height: 100vh;
   background: 
-    radial-gradient(circle at 25% 25%, #001122 0%, #000000 50%),
-    linear-gradient(45deg, #000511 0%, #001122 100%);
+    radial-gradient(circle at 25% 25%, #1a1a2e 0%, #16213e 50%),
+    linear-gradient(45deg, #0f3460 0%, #16213e 100%);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00ff00;
+  color: #a8e6cf;
 }
 
 /* CRT Monitor Effects */
@@ -37,8 +37,8 @@ body {
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 255, 0, 0.03) 2px,
-      rgba(0, 255, 0, 0.03) 4px
+      rgba(168, 230, 207, 0.02) 2px,
+      rgba(168, 230, 207, 0.02) 4px
     );
   pointer-events: none;
   z-index: 2;
@@ -87,40 +87,41 @@ body {
 .pixel-text {
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
+  color: #a8e6cf;
   text-shadow: 
-    0 0 5px #00ff00,
-    0 0 10px #00ff00,
-    0 0 15px #00ff00;
+    0 0 3px #a8e6cf,
+    0 0 6px #a8e6cf,
+    0 0 9px #a8e6cf;
   animation: glow-pulse 2s ease-in-out infinite alternate;
 }
 
 .pixel-text.neon {
-  color: #ff00ff;
+  color: #dda0dd;
   text-shadow: 
-    0 0 5px #ff00ff,
-    0 0 10px #ff00ff,
-    0 0 15px #ff00ff;
+    0 0 3px #dda0dd,
+    0 0 6px #dda0dd,
+    0 0 9px #dda0dd;
 }
 
 .subtitle-bar {
   font-size: 0.8rem;
-  color: #00ffff;
+  color: #87ceeb;
   text-align: center;
   margin-top: 1rem;
   letter-spacing: 0.3rem;
-  text-shadow: 0 0 5px #00ffff;
+  text-shadow: 0 0 3px #87ceeb;
 }
 
 /* Retro boxes */
 .retro-box {
-  background: rgba(0, 255, 0, 0.1);
-  border: 2px solid #00ff00;
+  background: rgba(168, 230, 207, 0.08);
+  border: 2px solid #a8e6cf;
   border-radius: 0;
   margin: 1.5rem 0;
   padding: 1.5rem;
   box-shadow: 
-    inset 0 0 10px rgba(0, 255, 0, 0.2),
-    0 0 20px rgba(0, 255, 0, 0.3);
+    inset 0 0 8px rgba(168, 230, 207, 0.15),
+    0 0 15px rgba(168, 230, 207, 0.2);
   position: relative;
 }
 
@@ -131,20 +132,20 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #00ff00, #ff00ff, #00ffff, #ffff00);
+  background: linear-gradient(45deg, #a8e6cf, #dda0dd, #87ceeb, #f0e68c);
   z-index: -1;
   filter: blur(1px);
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 /* System status */
 .status-header,
 .message-header {
   font-size: 0.9rem;
-  color: #ffff00;
+  color: #f0e68c;
   text-align: center;
   margin-bottom: 1rem;
-  text-shadow: 0 0 5px #ffff00;
+  text-shadow: 0 0 3px #f0e68c;
   letter-spacing: 0.1rem;
 }
 
@@ -160,12 +161,12 @@ body {
   align-items: center;
   font-size: 0.7rem;
   padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid #004400;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #4a7c7c;
 }
 
 .status-label {
-  color: #00ffff;
+  color: #87ceeb;
   letter-spacing: 0.1rem;
 }
 
@@ -175,14 +176,14 @@ body {
 }
 
 .status-value.online {
-  color: #00ff00;
-  text-shadow: 0 0 5px #00ff00;
+  color: #90ee90;
+  text-shadow: 0 0 3px #90ee90;
   animation: pulse-green 1.5s infinite;
 }
 
 .status-value.ready {
-  color: #ffff00;
-  text-shadow: 0 0 5px #ffff00;
+  color: #f0e68c;
+  text-shadow: 0 0 3px #f0e68c;
   animation: pulse-yellow 1.5s infinite;
 }
 
@@ -190,7 +191,7 @@ body {
 .pixel-text-small {
   font-size: 0.6rem;
   line-height: 1.8;
-  color: #00ff00;
+  color: #a8e6cf;
   text-align: center;
   margin: 0;
   letter-spacing: 0.05rem;
@@ -203,8 +204,8 @@ body {
 }
 
 .retro-btn {
-  background: linear-gradient(45deg, #ff00ff, #ff0066);
-  border: 3px solid #ff00ff;
+  background: linear-gradient(45deg, #dda0dd, #b19cd9);
+  border: 3px solid #dda0dd;
   color: #ffffff;
   font-family: 'Press Start 2P', monospace;
   font-size: 0.8rem;
@@ -216,15 +217,15 @@ body {
   overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 
-    0 0 20px rgba(255, 0, 255, 0.5),
-    inset 0 0 10px rgba(255, 255, 255, 0.1);
+    0 0 15px rgba(221, 160, 221, 0.4),
+    inset 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
 .retro-btn:hover {
-  background: linear-gradient(45deg, #ff0066, #ff00ff);
+  background: linear-gradient(45deg, #b19cd9, #dda0dd);
   box-shadow: 
-    0 0 30px rgba(255, 0, 255, 0.8),
-    inset 0 0 15px rgba(255, 255, 255, 0.2);
+    0 0 20px rgba(221, 160, 221, 0.6),
+    inset 0 0 12px rgba(255, 255, 255, 0.15);
   transform: scale(1.05);
 }
 
